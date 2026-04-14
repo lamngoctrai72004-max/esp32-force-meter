@@ -1,0 +1,18 @@
+<phyphox>
+  <title>ESP32 Force Meter</title>
+  <input>
+    <bluetooth>
+      <device name="ESP32_ForceMeter">
+        <service uuid="180F">
+          <characteristic uuid="2A19" datatype="string" />
+        </service>
+      </device>
+    </bluetooth>
+  </input>
+  <output>
+    <view>
+      <graph label="Force (N)" input="bluetooth.ESP32_ForceMeter.180F.2A19" />
+      <value label="Current Force" input="bluetooth.ESP32_ForceMeter.180F.2A19" />
+    </view>
+  </output>
+</phyphox>
